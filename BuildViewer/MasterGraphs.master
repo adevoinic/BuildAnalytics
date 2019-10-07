@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MasterGraphs.master.cs" Inherits="BuildViewer.MasterGraphs" %>
+
+<asp:Content ID="CommonContent" ContentPlaceHolderID="MainContent" runat="server">
+	<script src="Scripts/RGraph/full/RGraph.svg.common.core.js"></script>
+	<script src="Scripts/RGraph/full/RGraph.svg.common.ajax.js"></script>
+	<script src="Scripts/RGraph/full/RGraph.svg.common.key.js"></script>
+	<script src="Scripts/RGraph/full/RGraph.svg.common.tooltips.js"></script>
+	<script src="Scripts/RGraph/full/RGraph.svg.common.csv.js"></script>
+	<script src="Scripts/RGraph/full/RGraph.svg.line.js"></script>
+	
+
+	<div style="margin-bottom:20px">
+		<asp:Label runat="server" Text="Display last days"></asp:Label>
+		<asp:TextBox runat="server" Text="25" Width="30px" MaxLength="3" ID="txtLastDays"></asp:TextBox>
+		<%--<asp:Button Text="Load" runat="server" OnClientClick="DisplayLastDays();" />--%>
+	</div>
+	<asp:ContentPlaceHolder ID="GraphsContent" runat="server">
+	</asp:ContentPlaceHolder>
+</asp:Content>
